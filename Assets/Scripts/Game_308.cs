@@ -51,6 +51,12 @@ public class TapImageGame : Page
     {
         isActiveHint = true;
 
+        if(PageManager.Instance.macaronCount < 1)
+        {
+            hintObj.SetActive(false);
+            return;
+        }
+
         PageManager.Instance.macaronCount -= 1;
         macaronCount.text = PageManager.Instance.macaronCount.ToString();
 
