@@ -22,6 +22,7 @@ public class TapImageGame : Page
 
     public override void ResetPage()
     {
+        PageManager.Instance.problemPage++;
         starCount.text = PageManager.Instance.getStarCount.ToString();
         macaronCount.text = PageManager.Instance.macaronCount.ToString();
         pageText.text = PageManager.Instance.problemPage.ToString() + " of 10";

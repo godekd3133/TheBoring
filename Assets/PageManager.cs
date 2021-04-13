@@ -25,7 +25,7 @@ public class PageManager : GlobalInstance<PageManager>
     public int bookMarkCount = 4;
 
 
-    public int problemPage = 1;
+    public int problemPage = 0;
     public int macaronCount = 5;
     public int getStarCount = 0;
 
