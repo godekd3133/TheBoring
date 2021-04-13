@@ -472,6 +472,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d76667966c262ff4b9123bdae103dfcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefabsPage:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  problemPage: 1
+  macaronCount: 5
+  getStarCount: 0
 --- !u!4 &813699945
 Transform:
   m_ObjectHideFlags: 0
