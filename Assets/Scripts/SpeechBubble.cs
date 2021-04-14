@@ -16,6 +16,7 @@ public class SpeechBubble : MonoBehaviour
     int currentIndex = 0;
 
     public bool enableOnStart;
+    public bool disableOnEnd;
 
     private void Awake()
     {
@@ -43,18 +44,22 @@ public class SpeechBubble : MonoBehaviour
 
     public void OnClick(PointerEventData eventData)
     {
+
         Next();
+
     }
 
 
     public void Next()
     {
+        if (currentIndex >= listText.Count - 1 && !disableOnEnd)
+            return;
         listText[currentIndex].gameObject.SetActive(false);
         currentIndex++;
-
         if (currentIndex == listText.Count)
         {
-            DisableSpeetch();
+            if (disableOnEnd == true)
+                DisableSpeetch();
         }
         else listText[currentIndex].gameObject.SetActive(true);
 
