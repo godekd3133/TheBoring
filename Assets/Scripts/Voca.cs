@@ -42,13 +42,13 @@ public class Voca : Page
         text02.text = Str02;
         text03.text = Str03;
 
-        ResetPage();
+        OnResetPage();
 
     }
 
-    public override void ResetPage()
+    public override void OnResetPage()
     {
-        base.ResetPage();
+        base.OnResetPage();
         button01.gameObject.SetActive(true);
         button02.gameObject.SetActive(true);
         button03.gameObject.SetActive(true);

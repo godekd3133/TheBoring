@@ -20,7 +20,7 @@ public class TapImageGame : Page
 
     bool isCardSelect = false;
 
-    public override void ResetPage()
+    public override void OnResetPage()
     {
         PageManager.Instance.problemPage++;
         starCount.text = PageManager.Instance.getStarCount.ToString();
@@ -30,13 +30,15 @@ public class TapImageGame : Page
 
     private void Start()
     {
-        foreach(var button in buttons)
+        foreach (var button in buttons)
         {
-            button.onClick.AddListener(() => {
+            button.onClick.AddListener(() =>
+            {
                 if (isCardSelect) return;
                 isCardSelect = true;
                 nextPageObj.SetActive(true);
-                button.gameObject.SetActive(false); });
+                button.gameObject.SetActive(false);
+            });
         }
     }
 
@@ -51,7 +53,7 @@ public class TapImageGame : Page
     {
         isActiveHint = true;
 
-        if(PageManager.Instance.macaronCount < 1)
+        if (PageManager.Instance.macaronCount < 1)
         {
             hintObj.SetActive(false);
             return;

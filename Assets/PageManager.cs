@@ -29,14 +29,14 @@ public class PageManager : GlobalInstance<PageManager>
     public int macaronCount = 5;
     public int getStarCount = 0;
 
-    public void GainPage()
+    public void PrevPage()
     {
         var oldTf = canvas.GetChild(bookMarkCount + (currentPageIndex) - 1);
         oldTf.gameObject.SetActive(false);
 
         var tf = canvas.GetChild(bookMarkCount + (--currentPageIndex) - 1);
         tf.gameObject.SetActive(true);
-        tf.GetComponent<Page>().ResetPage();
+        tf.GetComponent<Page>().OnResetPage();
 
     }
     public void NextPage()
@@ -46,7 +46,7 @@ public class PageManager : GlobalInstance<PageManager>
 
         var tf = canvas.GetChild(bookMarkCount + (++currentPageIndex) - 1);
         tf.gameObject.SetActive(true);
-        tf.GetComponent<Page>().ResetPage();
+        tf.GetComponent<Page>().OnResetPage();
     }
 
 }
