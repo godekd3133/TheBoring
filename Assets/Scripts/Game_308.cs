@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System.Linq;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,12 +14,14 @@ public class TapImageGame : Page
     public GameObject hintObj = null;
     public GameObject realHintObj = null;
     public GameObject nextPageObj = null;
+    public GameObject resultObj = null;
 
     public Button[] buttons = null;
 
     bool isActiveHint = false;
 
     bool isCardSelect = false;
+    public bool isLast = false;
 
     public override void OnResetPage()
     {
@@ -37,6 +40,13 @@ public class TapImageGame : Page
                 if (isCardSelect) return;
                 isCardSelect = true;
                 nextPageObj.SetActive(true);
+                if (isLast)
+                {
+                    resultObj.SetActive(true);
+                    var texts = resultObj.GetComponentsInChildren<Text>().ToList();
+                    texts[0].text = PageManager.Instance.getStarCount.ToString();
+                    texts[1].text = (PageManager.Instance.getStarCount + PageManager.Instance.macaronCount).ToString();
+                }
                 button.gameObject.SetActive(false);
             });
         }
