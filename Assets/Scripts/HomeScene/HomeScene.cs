@@ -14,6 +14,13 @@ public class HomeScene : MonoBehaviour
         //임시코드
         MaxStage = 2;
     }
+
+    public void Stage02()
+    {
+        SceneManager.LoadScene("2ndScene");
+
+    }
+
     public void OnButtonClick()
     {
         if (MaxStage == 1)
