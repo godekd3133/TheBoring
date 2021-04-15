@@ -9,7 +9,11 @@ public class Write : Page
 {
     public RectTransform answer;
 
+    public Text macarongText;
+
     public Button chkButton;
+
+    public GameObject hintImage;
 
     public List<string> correctAnswers = new List<string>();
 
@@ -22,11 +26,20 @@ public class Write : Page
 
     private void Start()
     {
-
+        hintImage.SetActive(false);
+    }
+    public void OnHint()
+    {
+        if (PageManager.Instance.macaronCount >= 1)
+        {
+            hintImage.SetActive(true);
+            PageManager.Instance.macaronCount--;
+        }
     }
 
     private void Update()
     {
+        macarongText.text = PageManager.Instance.macaronCount.ToString();
         bool chk = true;
         foreach (var each in listAnswers)
         {
