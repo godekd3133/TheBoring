@@ -5,7 +5,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Story : MonoBehaviour
+public class Story : Page
 {
     public RectTransform problems;
 
