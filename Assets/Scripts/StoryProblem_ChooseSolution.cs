@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class StoryProblem_ChooseSolution : MonoBehaviour
+public class StoryProblem_ChooseSolution : StoryProblem
 {
     public RectTransform solution;
 
@@ -35,17 +35,27 @@ public class StoryProblem_ChooseSolution : MonoBehaviour
     {
         print("딩동댕");
         Correct.SetActive(true);
+        InCorrect.SetActive(false);
+        isClear = true;
 
     }
     public void OnClickIncorrectSoulution()
     {
-        print("땡");
-        InCorrect.SetActive(true);
+        if (isClear == false)
+        {
+            print("땡");
+            InCorrect.SetActive(true);
+        }
     }
 
 
     void Update()
     {
 
+    }
+
+    public override bool CheckSolution()
+    {
+        return isClear;
     }
 }
