@@ -16,7 +16,7 @@ public class LaunchScene : MonoBehaviour
 
     public void OnClickStartButton()
     {
-        SceneManager.LoadScene("HomeScene");
+        SceneManager.LoadScene("HomeScene02");
 
     }
 

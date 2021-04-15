@@ -529,7 +529,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uB2E4\uC2DC \uC2DC\uB3C4\uD574!"
+  m_Text: "\uB2E4\uC2DC \uC2DC\uB3C4\uD574\uC8FC\uC138\uC694."
 --- !u!1 &2616471108002979675
 GameObject:
   m_ObjectHideFlags: 0
@@ -889,7 +889,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uB2E4\uC2DC \uC2DC\uB3C4\uD574!"
+  m_Text: "\uB2E4\uC2DC \uC2DC\uB3C4\uD574\uC8FC\uC138\uC694."
 --- !u!1 &3742877827159115068
 GameObject:
   m_ObjectHideFlags: 0
@@ -3046,7 +3046,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uB2E4\uC2DC \uC2DC\uB3C4\uD574!"
+  m_Text: "\uB2E4\uC2DC \uC2DC\uB3C4\uD574\uC8FC\uC138\uC694."
 --- !u!1 &8320307088864694898
 GameObject:
   m_ObjectHideFlags: 0
@@ -3546,9 +3546,9 @@ RectTransform:
   m_Father: {fileID: 8320307087495309317}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 345, y: -360}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 345, y: 0}
   m_SizeDelta: {x: 690, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &8320307089188339533
