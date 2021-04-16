@@ -1564,7 +1564,7 @@ MonoBehaviour:
   bookMarkIndex: 0
   bookMarkCount: 4
   bookMarkChangeIndex: 04000000080000000900000014000000
-  problemPage: 0
+  problemPage: 1
   macaronCount: 5
   getStarCount: 0
 --- !u!4 &1395576375
@@ -5183,6 +5183,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: game_315
+      objectReference: {fileID: 0}
+    - target: {fileID: 9222428262259005474, guid: 812086602ef7de842aa24896f7cb764d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9222428262750161975, guid: 812086602ef7de842aa24896f7cb764d,
         type: 3}
