@@ -39,6 +39,27 @@ public class PageManager : GlobalInstance<PageManager>
         tf.gameObject.SetActive(true);
         tf.GetComponent<Page>().OnResetPage();
 
+        for (int i = 0; i < bookMarkChangeIndex.Length; i++)
+        {
+            if (bookMarkChangeIndex[i] == (bookMarkCount + currentPageIndex))
+            {
+
+                try
+                {
+                    var bookTf = canvas.GetChild(i - 1);
+                    bookTf.gameObject.SetActive(true);
+                }
+                catch
+                {
+
+                }
+
+                var oldBookTf = canvas.GetChild(i);
+                oldBookTf.gameObject.SetActive(false);
+
+            }
+        }
+
     }
     public void NextPage()
     {
@@ -49,15 +70,23 @@ public class PageManager : GlobalInstance<PageManager>
         tf.gameObject.SetActive(true);
         tf.GetComponent<Page>().OnResetPage();
 
-        for(int i = 0; i < bookMarkChangeIndex.Length; i++)
+        for (int i = 0; i < bookMarkChangeIndex.Length; i++)
         {
-            if(bookMarkChangeIndex[i] == (bookMarkCount + currentPageIndex))
+            if (bookMarkChangeIndex[i] == (bookMarkCount + currentPageIndex))
             {
                 var bookTf = canvas.GetChild(i);
                 bookTf.gameObject.SetActive(true);
 
-                var oldBookTf = canvas.GetChild(i - 1);
-                oldBookTf.gameObject.SetActive(false);
+                try
+                {
+                    var oldBookTf = canvas.GetChild(i - 1);
+                    oldBookTf.gameObject.SetActive(false);
+                }
+                catch
+                {
+
+                }
+
             }
         }
 
