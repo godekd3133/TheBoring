@@ -13,6 +13,7 @@ public class SpeechBubble : MonoBehaviour
     Image image;
 
     private List<RectTransform> listText;
+
     int currentIndex = 0;
 
     public bool enableOnStart;

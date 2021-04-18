@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class StoryProblem : MonoBehaviour
 {
-    public Story handleStory = null;
+    [HideInInspector] public Story handleStory = null;
     //정답인지 확인
     public bool isClear = false;
 

@@ -21,6 +21,12 @@ public class HomeScene : MonoBehaviour
 
     }
 
+    public void Stage03()
+    {
+        SceneManager.LoadScene("3rdScene");
+
+    }
+
     public void OnButtonClick()
     {
         if (MaxStage == 1)

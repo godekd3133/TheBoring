@@ -10,4 +10,10 @@ public class Empty : Page
 
         SceneManager.LoadScene("LaunchScene");
     }
+
+    public void GoHome03()
+    {
+        SceneManager.LoadScene("HomeScene03");
+
+    }
 }

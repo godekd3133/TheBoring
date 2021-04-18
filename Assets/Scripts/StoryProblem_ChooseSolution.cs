@@ -33,7 +33,6 @@ public class StoryProblem_ChooseSolution : StoryProblem
 
     public void OnClickCorrectSolution()
     {
-        print("딩동댕");
         Correct.SetActive(true);
         InCorrect.SetActive(false);
         isClear = true;
@@ -43,7 +42,6 @@ public class StoryProblem_ChooseSolution : StoryProblem
     {
         if (isClear == false)
         {
-            print("땡");
             InCorrect.SetActive(true);
         }
     }
