@@ -43,16 +43,9 @@ public class PageManager : GlobalInstance<PageManager>
         {
             if (bookMarkChangeIndex[i] == (bookMarkCount + currentPageIndex))
             {
-
-                try
-                {
-                    var bookTf = canvas.GetChild(i - 1);
-                    bookTf.gameObject.SetActive(true);
-                }
-                catch
-                {
-
-                }
+                
+                var bookTf = canvas.GetChild(i - 1);
+                bookTf.gameObject.SetActive(true);
 
                 var oldBookTf = canvas.GetChild(i);
                 oldBookTf.gameObject.SetActive(false);
@@ -74,12 +67,12 @@ public class PageManager : GlobalInstance<PageManager>
         {
             if (bookMarkChangeIndex[i] == (bookMarkCount + currentPageIndex))
             {
-                var bookTf = canvas.GetChild(i);
+                var bookTf = canvas.GetChild(i + 1);
                 bookTf.gameObject.SetActive(true);
 
                 try
                 {
-                    var oldBookTf = canvas.GetChild(i - 1);
+                    var oldBookTf = canvas.GetChild(i);
                     oldBookTf.gameObject.SetActive(false);
                 }
                 catch
