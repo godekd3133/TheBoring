@@ -31,7 +31,7 @@ public class DragObject : MonoBehaviour
         
         tp.rotation = Quaternion.Euler(0, 0, z);
 
-        tp.sizeDelta = new Vector2(Mathf.Sqrt(Mathf.Pow(direction.x, 2) + Mathf.Pow(direction.y, 2)) + 15, 30);
+        tp.sizeDelta = new Vector2((Mathf.Sqrt(Mathf.Pow(direction.x, 2) + Mathf.Pow(direction.y, 2))) * 0.7f, 30);
     }
 
     public void SetCell(DragPoint point)
@@ -42,7 +42,7 @@ public class DragObject : MonoBehaviour
 
         tp.rotation = Quaternion.Euler(0, 0, z);
 
-        tp.sizeDelta = new Vector2(Mathf.Sqrt(Mathf.Pow(direction.x, 2) + Mathf.Pow(direction.y, 2)) + 15, 30);
+        tp.sizeDelta = new Vector2((Mathf.Sqrt(Mathf.Pow(direction.x, 2) + Mathf.Pow(direction.y, 2)) )* 0.7f, 30);
     }
 
 
