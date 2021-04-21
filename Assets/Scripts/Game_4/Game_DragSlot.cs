@@ -8,6 +8,7 @@ public class Game_DragSlot : MonoBehaviour, IBeginDragHandler, IEndDragHandler, 
 {
     public Game_4 game;
 
+
     public void OnBeginDrag(PointerEventData eventData)
     {
         for(int i = 0; i < game.dragImageP.childCount; i++)
@@ -54,11 +55,16 @@ public class Game_DragSlot : MonoBehaviour, IBeginDragHandler, IEndDragHandler, 
                 {
                     results[findIndex].gameObject.GetComponent<Game_DropSlot>().transform.GetComponent<Image>().sprite = game.dragObject.transform.GetComponent<Image>().sprite;
                     game.dropIndex[i] = -1;
+                    this.transform.GetComponent<Image>().color = new Color(0.75f, 0.75f, 0.75f, 1f);
+
                     game.CheckWin();
                 }
                 else
                 {
                     game.remainNumber--;
+                    game.remainText.text = game.remainNumber.ToString();
+                    if (game.remainNumber <= 0)
+                        game.reGame.SetActive(true);
                 }
 
 
