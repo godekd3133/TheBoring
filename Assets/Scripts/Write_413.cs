@@ -15,6 +15,7 @@ public class Write_413 : Page
 
     public GameObject Fix;
     public GameObject ClearMessage;
+    public GameObject hintObj;
 
     public bool success;
     public bool isFailed = false;
@@ -47,10 +48,15 @@ public class Write_413 : Page
         success = false;
         InputField.text = "";
         Fix.SetActive(false);
+        hintObj.SetActive(false);
 
         gameOver.SetActive(false);
         ClearMessage.SetActive(false);
         InputField.interactable = true;
+    }
+    public void HintActive()
+    {
+        hintObj.SetActive(!hintObj.activeSelf);
     }
 
 
