@@ -17,6 +17,7 @@ public class Write_413 : Page
     public GameObject ClearMessage;
 
     public bool success;
+    public bool isFailed = false;
 
     [HideInInspector] public float currentTimer;
 
@@ -33,10 +34,25 @@ public class Write_413 : Page
         success = false;
         InputField.text = "";
         Fix.SetActive(false);
+        isFailed = false;
+
         gameOver.SetActive(false);
         ClearMessage.SetActive(false);
         InputField.interactable = true;
     }
+
+    public void Restart()
+    {
+        currentTimer = timeLimit;
+        success = false;
+        InputField.text = "";
+        Fix.SetActive(false);
+
+        gameOver.SetActive(false);
+        ClearMessage.SetActive(false);
+        InputField.interactable = true;
+    }
+
 
     public void ChkInput()
     {
@@ -61,7 +77,16 @@ public class Write_413 : Page
         {
             if (currentTimer < 0f)
             {
-                gameOver.SetActive(true);
+                if (isFailed == true)
+                {
+                    OnSuccess();
+                }
+                else
+                {
+                    isFailed = true;
+                    gameOver.SetActive(true);
+
+                }
             }
             else
                 currentTimer -= Time.deltaTime;
