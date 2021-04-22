@@ -478,7 +478,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 637505101914265002}
-        m_MethodName: GoTitle
+        m_MethodName: GoHome04
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
