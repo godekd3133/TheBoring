@@ -16,7 +16,7 @@ public class HomeScene : MonoBehaviour
     }
     public void Stage04()
     {
-        SceneManager.LoadScene("2ndScene");
+        SceneManager.LoadScene("4thScene");
 
     }
     public void Stage02()
